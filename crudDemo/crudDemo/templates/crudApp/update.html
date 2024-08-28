@@ -1,0 +1,23 @@
+{% extends 'crudApp/base.html' %}
+{% block information %}
+{%load static %}
+<html>
+
+<head>
+</head>
+<body>
+<h1> Update Employee - Form </h1>
+<form method="post">
+<table border='1'>
+Employee Id <input type="text" name="eNo" value="{{employee.eNo}}"><br>
+Employee Name <input type="text" name="eName" value="{{employee.eName}}"><br>
+Employee Salary <input type="text" name="eSalary" value="{{employee.eSalary}}"><br>
+Employee Address <input type="text" name="eAddress" value="{{employee.eAddress}}"><br>
+</table>
+{% csrf_token %}
+<input type="Submit" value="Update Employee">
+</form>
+{% endblock %}
+</body>
+</html>
+

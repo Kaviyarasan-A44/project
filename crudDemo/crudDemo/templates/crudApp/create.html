@@ -1,0 +1,20 @@
+{% extends 'crudApp/base.html' %}
+{% block information %}
+{%load static %}
+<html>
+
+<head>
+</head>
+<body>
+<h1> Add New Employee - Form </h1>
+<form method="post">
+<table border='1'>
+{{employees.as_p}}
+</table>
+{% csrf_token %}
+<input type="Submit" value="Add Employee">
+</form>
+{% endblock %}
+</body>
+</html>
+

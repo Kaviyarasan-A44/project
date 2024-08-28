@@ -1,0 +1,30 @@
+{%loadstatic %}
+<html>
+<head>
+<title> student information</title>
+</head>
+<body>
+<h1>list of student:</h1>
+{% if student_list %}
+{% for student in student_list %}
+<table>
+<thead>
+<th> student no </th>
+<th> student name </th>
+<th> student dept </th>
+<th> student address </th>
+</thead>
+{% for student in student_list %}
+<tr>
+    <td>{{stu.studentno}}</td>
+    <td>{{stu.studentname}}</td>
+    <td>{{stu.studentdept}}</td>
+    <td>{{stu.studentaddress}}</td>
+</tr>
+{% endfor %}
+</table>
+{% else %}
+<h2> No records found</h2>
+{% endif %}
+</body>
+</html>
